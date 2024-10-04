@@ -10,12 +10,15 @@ This is a step-by-step introduction of the code
      - image_7tt1_inv1.nii.gz
      - image_7tt1_inv2.nii.gz
      - image_7tt2.nii.gz
+       
    - Step 2: Unify image direction
      In order to finish the following registration, cropping, and flipping, we unify the direction of all images. We used RSA direction in this study.
      - Python function: unify_direction(data_path)
      - Input: data_path: the folder that contains multi-modality data
      - Output: a shell script named "convert_direction.sh"
      - Execuate the shell script, images' directions will be unified to RSA
+       
    - Step 3: Whole-brain registration
      This is a coarse registration globally.
+     - Python function: 
       
