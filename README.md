@@ -28,7 +28,7 @@ This is a step-by-step introduction of the code
      - Output: a shell script in the case_path named "global_registration.sh"
      - Execuate the shell script "global_registration.sh", whole-brain registration will be implemented
 
-  - Step 4: Trim neck for 3T-T1w image
+   - Step 4: Trim neck for 3T-T1w image
     
     Because the 3T-T1w template does not contain the neck, we need to trim the neck region from our 3T-T1w data to reduce the registration noisy.
     - Python function: trim_neck_for_original_3tt1(case_path)
@@ -36,7 +36,7 @@ This is a step-by-step introduction of the code
     - Output: a shell script in the case_path named "command_trim_neck.sh"
     - Execuate the shell script "command_trim_neck.sh", 3T-T1w image neck-trimming will be implemented
 
-  - Step 5: Template registration (from 3T-T1w template to individule 3T-T1w image)
+   - Step 5: Template registration (from 3T-T1w template to individule 3T-T1w image)
     
     - Python function: register_template_to_original_3tt1_trimed(case_path)
     - Input:
@@ -50,7 +50,7 @@ This is a step-by-step introduction of the code
     - Output: a shell script in the case_path named "command_template_registration.sh"
     - Execuate the shell script "command_template_registration.sh", template registration will be implemented
 
-  - Step 6: Cropping the ROI
+   - Step 6: Cropping the ROI
 
     After registering ROI from template to individule space, we know where the MTL region is. This step crops the whole-brain image into left and right patch
     # here, here
