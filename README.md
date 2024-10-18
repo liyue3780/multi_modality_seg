@@ -76,11 +76,12 @@ This is a step-by-step introduction of the code
        - case_path: the folder that contains multi-modality data
 
 2. Model training:
+   
    In the project, there is a python script named "modAugAllFourTrainer.py". Please put it into the nnUNet's package under the folder 'nnunetv2/training/nnUNetTrainer'. Then, when training data is prepared, run the nnUNet training command and set trainer as 'ModalityAugmentTransform'.
 
    Please remember that the left and right patch for the same subject should be put into the same fold while training.
 
-4. Run nnUNet inference
+3. Run nnUNet inference
    Just run the command in the command line:
 
    "nnUNetv2_predict -i $DATAPATH/nnunet/input -o $DATAPATH/nnunet/output -d 600 -c 3d_fullres -tr ModAugAllFourUNetTrainer", where $DATAPATH is the folder that contains multi-modality data (same as 'case_path' above), the '600' is the model ID. We used 600 in this study. You can change it with any ID when you are training the model.
